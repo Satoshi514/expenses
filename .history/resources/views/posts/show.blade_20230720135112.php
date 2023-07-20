@@ -22,7 +22,7 @@
        </select>
      </div>
     
-    </div>  
+    </div>   
   </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
