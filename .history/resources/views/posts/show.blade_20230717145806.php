@@ -43,14 +43,14 @@
        getUTCMonth() {
 
     // 支出月リストを取得
-     fetch('/expenses/public/ajax/posts/months')
+     fetch('/expenses/expenses/public/ajax/posts/months')
      .then(response => response.json())
      .then(data => this.months = data);
     },
    
     getOutgos() {
      // 支出データを取得
-     fetch('/expenses/public/ajax/outgos?month='+ this.month)
+     fetch('/expenses/expenses/public/ajax/outgos?month='+ this.month)
           .then(response => response.json())
           .then(data => {
 
