@@ -5,7 +5,7 @@
 <h1 class="detail">支出詳細</h1>
 
 <a href = " {{ route('posts.create') }}" class="btn btn-info text-white ml-10">新規登録</a>
-<a href = " {{ route('posts.edit') }}" class="btn btn-success text-white ml-10">編集</a>
+<a href = " {{ route('posts.edit') }}" class="btn btn-success" text-white ml-10">編集</a>
 
 
   <div id="app" class="container p-3">

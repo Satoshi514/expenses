@@ -51,7 +51,7 @@ class OutgoController extends Controller
 
        $outgo->save();
 
-       return to_route('posts.show',compact('outgo'));
+       return redirect()->route('posts.show',compact('outgo'));
     }
     
     /**
@@ -78,9 +78,7 @@ class OutgoController extends Controller
      */
     public function edit(Outgo $outgo)
     {
-        $data = Outgo::select('major_subject_name','subject','year','month','amount','description')->orderBy('id','desc')->get();
-        return view('posts.edit',compact('data'));
-        
+        //
     }
 
     /**
@@ -113,8 +111,6 @@ class OutgoController extends Controller
      */
     public function destroy(Outgo $outgo)
     {
-        $outgo->delete();
-
-        return to_route('posts.show');
+        $outgo->destroy()
     }
 }

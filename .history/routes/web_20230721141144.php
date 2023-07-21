@@ -33,10 +33,9 @@ Route::get('posts',[OutgoController::class,'index'])->name('posts.index');
 Route::get('/show',[OutgoController::class, 'show'])->name('posts.show');
 Route::get('/create',[OutgoController::class, 'create'])->name('posts.create');
 Route::post('/create',[OutgoController::class, 'create'])->name('posts.create');
-Route::get('/edit',[OutgoController::class, 'edit'])->name('posts.edit');
-Route::post('/edit',[OutgoController::class, 'edit'])->name('posts.edit');
+Route::get('/edit',[OutogoController::class, 'edit'])->name('posts.edit');
+Route::post('/edit',[OutogoController::class, 'edit'])->name('posts.edit');
 Route::post('/posts',[OutgoController::class,'store'])->name('posts.store');
-Route::post('/posts',[OutgoController::class,'update'])->name('posts.update');
 
 Route::get('ajax/outgos',[App\Http\Controllers\Ajax\OutgoController::class,'show']);
 Route::get('ajax/posts/months',[App\Http\Controllers\Ajax\OutgoController::class,'months']);

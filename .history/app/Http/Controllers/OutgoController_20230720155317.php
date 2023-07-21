@@ -13,10 +13,9 @@ class OutgoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
-     public function __construct(){
-        $this->middleware('auth', ['only' => ['create', 'show']]);
-     }
+    public function_construct() {
+        $this->middleware('auth', ['only' => ,['create','show']]);
+    }
     
      public function index()
     {       
@@ -51,7 +50,7 @@ class OutgoController extends Controller
 
        $outgo->save();
 
-       return to_route('posts.show',compact('outgo'));
+       return redirect()->route('posts.show',compact('outgo'));
     }
     
     /**
@@ -78,9 +77,7 @@ class OutgoController extends Controller
      */
     public function edit(Outgo $outgo)
     {
-        $data = Outgo::select('major_subject_name','subject','year','month','amount','description')->orderBy('id','desc')->get();
-        return view('posts.edit',compact('data'));
-        
+        //
     }
 
     /**
@@ -92,17 +89,7 @@ class OutgoController extends Controller
      */
     public function update(Request $request, Outgo $outgo)
     {
-        $outgo = new Outgo();
-       $outgo->major_subject_name = $request->input('major_subject_name');
-       $outgo->subject = $request->input('subject');
-       $outgo->year = $request->input('year');
-       $outgo->month = $request->input('month');
-       $outgo->amount = $request->input('amount');
-       $outgo->description = $request->input('description');
-
-       $outgo->save();
-
-       return to_route('posts.show');
+        //
     }
 
     /**
@@ -113,8 +100,6 @@ class OutgoController extends Controller
      */
     public function destroy(Outgo $outgo)
     {
-        $outgo->delete();
-
-        return to_route('posts.show');
+        //
     }
 }

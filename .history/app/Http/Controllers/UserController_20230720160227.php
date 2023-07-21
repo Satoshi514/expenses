@@ -8,14 +8,13 @@ use Illuminate\Http\Request;
 use App\Models\Outgo;
 
 class UserController extends Controller
-{
 
-public function __construct() {
-    $this->middleware('auth',);
+public function __construct(){
+    $this->middleware('auth', ['only' => ['create', 'store']]);
  }
  
 
-
+{
     public function mypage() {
     $user = Auth::user();
 
