@@ -36,7 +36,7 @@ Route::post('/create',[OutgoController::class, 'create'])->name('posts.create');
 Route::get('/edit',[OutgoController::class, 'edit'])->name('posts.edit');
 Route::post('/edit',[OutgoController::class, 'edit'])->name('posts.edit');
 Route::post('/posts/create',[OutgoController::class,'store'])->name('posts.store');
-Route::patch('/posts/edit',[OutgoController::class,'update'])->name('posts.update');
+Route::patch('/posts/{data}',[OutgoController::class,'update'])->name('posts.update');
 Route::delete('/posts/{data}',[OutController::class,'destroy'])->name('posts.destroy');
 
 Route::get('ajax/outgos',[App\Http\Controllers\Ajax\OutgoController::class,'show']);

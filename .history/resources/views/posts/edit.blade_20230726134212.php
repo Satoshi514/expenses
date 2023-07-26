@@ -4,7 +4,7 @@
 
       <h1 class="edit">編集</h1>
     <div class="data">
-      <form action="{{ Route('posts.update', $data) }}" method="post" class="mt-10">
+      <form action="{{ Route('posts.update'}}" method="post" class="mt-10">
         @csrf
         @method('patch')
         <div>
@@ -38,8 +38,8 @@
         </div>
 
         <button type="submit" class="btn btn-success">編集</button>
-        <button type="submit" value="削除" onclic='return confirm("本当に削除しますか?")' class="btn btn-danger"></button>
-      
+        <input type="submit" value="削除" onclic='return confirm("本当に削除しますか?")' class="btn btn-danger">
+      </form>
     </div>
    
   <footer>

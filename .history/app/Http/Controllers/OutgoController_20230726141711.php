@@ -62,7 +62,7 @@ class OutgoController extends Controller
      */
     public function show(Outgo $outgo)
     {
-        $outgos = Outgo::all();
+        $outgos = Outgo::find('id');
 
     return view('posts.show',compact('outgos'));
     }
@@ -89,6 +89,7 @@ class OutgoController extends Controller
      */
     public function update(Request $request, Outgo $outgo)
     {
+        $outgo = new Outgo();
        $outgo->major_subject_name = $request->input('major_subject_name');
        $outgo->subject = $request->input('subject');
        $outgo->year = $request->input('year');

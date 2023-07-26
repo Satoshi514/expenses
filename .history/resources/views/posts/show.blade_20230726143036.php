@@ -37,7 +37,7 @@
       <tbody>
         @foreach($outgos as $outgo)
         <tr>
-          <td>{{ $outgo->major_subject_name }}</td>
+          <td>{{ $outgo->major_category_name }}</td>
           <td>{{ $outgo->subject }}</td>
           <td>{{ $outgo->year }}</td>
           <td>{{ $outgo->month }}</td>

@@ -21,32 +21,9 @@
           <option v-for="month in months" :key="month" :value="month">@{{ month }} 月</option>
        </select>
      </div>
+  あ
     </div>  
-    <h2>支出明細</h2>
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>カテゴリー</th>
-          <th>項目</th>
-          <th>年</th>
-          <th>月</th>
-          <th>金額</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach($outgos as $outgo)
-        <tr>
-          <td>{{ $outgo->major_subject_name }}</td>
-          <td>{{ $outgo->subject }}</td>
-          <td>{{ $outgo->year }}</td>
-          <td>{{ $outgo->month }}</td>
-          <td>{{ $outgo->amount }}</td>
-          <td><a href="{{ route('posts.edit') }}" class="btn btn-info">編集</a></td>
-        </tr>
-        @endforeach
-      </tbody>
-    </table>
+    
   </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
@@ -144,5 +121,23 @@
 });
 </script>
            
+<table class="subject-detail">
+  <thead>
+     <tr>
+       <th>支出詳細</th>
+       <th>合計</th>
+     </tr>
+  </thead>
+  <tbody>
+     @foreach($outgos as $outgo)
+     <tr>
+        <td>{{ $outgo->major_subject_name}}</td>
+        <td>¥{{ $outgo->amount }}</td>
+     </tr>
+     @endforeach
+  </tbody>
+</table>
+
+  
 @endsection
 

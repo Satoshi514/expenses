@@ -4,7 +4,7 @@
 
       <h1 class="edit">編集</h1>
     <div class="data">
-      <form action="{{ Route('posts.update', $data) }}" method="post" class="mt-10">
+      <form action="{{ Route('posts.update') $outgo }}" method="post" class="mt-10">
         @csrf
         @method('patch')
         <div>

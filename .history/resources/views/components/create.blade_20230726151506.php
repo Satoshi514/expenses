@@ -156,7 +156,7 @@
     } else if(obj.value == "10") {
       targetArr = arrEducation
     } else if(obj.value == "11") {
-      targetArr = arrFashion
+      targetArr = arrFation
     } else if(obj.value == "12") {
       targetArr = arrSpecial
     } else if(obj.value == "13") {

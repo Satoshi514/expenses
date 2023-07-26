@@ -24,7 +24,7 @@
     </div>  
     <h2>支出明細</h2>
 
-    <table class="table table-striped">
+    <table>
       <thead>
         <tr>
           <th>カテゴリー</th>
@@ -37,7 +37,7 @@
       <tbody>
         @foreach($outgos as $outgo)
         <tr>
-          <td>{{ $outgo->major_subject_name }}</td>
+          <td>{{ $outgo->major_category_name }}</td>
           <td>{{ $outgo->subject }}</td>
           <td>{{ $outgo->year }}</td>
           <td>{{ $outgo->month }}</td>
@@ -144,5 +144,23 @@
 });
 </script>
            
+<table class="subject-detail">
+  <thead>
+     <tr>
+       <th>支出詳細</th>
+       <th>合計</th>
+     </tr>
+  </thead>
+  <tbody>
+     @foreach($outgos as $outgo)
+     <tr>
+        <td>{{ $outgo->major_subject_name}}</td>
+        <td>¥{{ $outgo->amount }}</td>
+     </tr>
+     @endforeach
+  </tbody>
+</table>
+
+  
 @endsection
 
