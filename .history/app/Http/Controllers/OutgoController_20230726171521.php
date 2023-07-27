@@ -75,8 +75,8 @@ class OutgoController extends Controller
      */
     public function edit(Outgo $outgo)
     {
-        $outgo = Outgo::find('id');
         return view('posts.edit',compact('outgo'));
+        
     }
 
     /**

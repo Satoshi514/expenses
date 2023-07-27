@@ -1,15 +1,4 @@
 <script>
-  const mysql = require('mysql')
-  const connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'root',
-    database:'expenses'
-  });
-  connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connected!');
-});
   var arr = [
     {cd:"", label:"▼カテゴリー"},
     {cd:"1", label:"食費"},
@@ -143,7 +132,7 @@
       document.getElementById('category').appendChild(op);
     }
 
-    document.getElementById('category').addEventListener('change', function() {
+    document.ElementById('category').addEventListener('change', function() {
       category(this);
     });
   }

@@ -1,11 +1,12 @@
-<script>
-  const mysql = require('mysql')
-  const connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'root',
-    database:'expenses'
-  });
+  <script>
+  require(['sample'], function(num) {
+
+const result = num(10);
+
+console.log(result);
+
+});
+  
   connection.connect((err) => {
   if (err) throw err;
   console.log('Connected!');

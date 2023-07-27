@@ -1,11 +1,6 @@
-<script>
-  const mysql = require('mysql')
-  const connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'root',
-    database:'expenses'
-  });
+  <script>
+  require(['mysql'],function()); {
+  }
   connection.connect((err) => {
   if (err) throw err;
   console.log('Connected!');

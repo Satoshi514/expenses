@@ -4,7 +4,7 @@
 
       <h1 class="edit">編集</h1>
     <div class="data">
-      <form action="{{ Route('posts.update',$outgo->id) }}" method="post" class="mt-10">
+      <form action="{{ Route('posts.update',$outgo) }}" method="post" class="mt-10">
         @csrf
         @method('patch')
         <div>
@@ -24,7 +24,7 @@
 
         <div class="mt-2">
           <label for="month">月</label>
-          <input type="text" name="month" value="{{ $outgo->month }}">
+          <input type="text" name="month" value="$outgo->month">
         </div>
 
         <div class="mt-2">
@@ -36,7 +36,7 @@
           <label for="description">メモ</label>
           <textarea name="description">{{ $outgo->description }}</textarea>
         </div>
-        
+        @endforeach
         <button type="submit" class="btn btn-success">更新</button>
         <button type="submit" value="削除" onclic='return confirm("本当に削除しますか?")' class="btn btn-danger"></button>
       </form>

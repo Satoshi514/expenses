@@ -1,4 +1,4 @@
-<script>
+<script src="path/to/my/store.legacy.min.js">
   const mysql = require('mysql')
   const connection = mysql.createConnection({
     host:'localhost',

@@ -1,5 +1,5 @@
-<script>
-  const mysql = require('mysql')
+  <script>
+  /*const mysql = require('mysql')
   const connection = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -9,7 +9,7 @@
   connection.connect((err) => {
   if (err) throw err;
   console.log('Connected!');
-});
+});*/
   var arr = [
     {cd:"", label:"▼カテゴリー"},
     {cd:"1", label:"食費"},

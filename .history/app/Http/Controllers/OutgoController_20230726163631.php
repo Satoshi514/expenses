@@ -75,8 +75,9 @@ class OutgoController extends Controller
      */
     public function edit(Outgo $outgo)
     {
-        $outgo = Outgo::find('id');
-        return view('posts.edit',compact('outgo'));
+        $data = Outgo::select('major_subject_name','subject','year','month','amount','description')->orderBy('id','desc')->get();
+        return view('posts.edit',compact('data'));
+        
     }
 
     /**
