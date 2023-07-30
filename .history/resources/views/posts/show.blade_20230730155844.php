@@ -23,7 +23,7 @@
        </select>
      </div>
     </div>  
-    <div class=col-md-5>
+    <div class=col-md-4>
     <table class="table table-striped">
       <h2>支出明細</h2>
       <thead>

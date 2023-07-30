@@ -62,7 +62,7 @@ class OutgoController extends Controller
      */
     public function show(Outgo $outgo)
     {
-        $outgos = Outgo::paginate(5);
+        $outgos = Outgo::pagenate(5);
 
     return view('posts.show',compact('outgos'));
     }

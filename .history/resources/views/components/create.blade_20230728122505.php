@@ -195,7 +195,7 @@
 
     function getElements(){
       var elements = document.getElementById('subject');
-      var len = elements.getAttribute('selObj');
+      var len = elements.getAttribute('name');
     }
   }
 </script>

@@ -9,7 +9,7 @@
 
   <div id="app" class="container">
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         
   
     <!--円グラフを表示するキャンバス -->
@@ -23,32 +23,7 @@
        </select>
      </div>
     </div>  
-    <div class=col-md-5>
-    <table class="table table-striped">
-      <h2>支出明細</h2>
-      <thead>
-        <tr>
-          <th class="col-xs-1 col-ma-1 col-lg-1">カテゴリー</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">項目</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">年</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">月</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">金額</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach($outgos as $outgo)
-        <tr>
-          <td class="col-xs-1 col-ma-1 col-lg-1">{{ $outgo->major_subject_name }}</td>
-          <td class="col-xs-1 col-ma-1 col-lg-1">{{ $outgo->subject }}</td>
-          <td class="col-xs-1 col-ma-1 col-lg-1">{{ $outgo->year }}</td>
-          <td class="col-xs-1 col-ma-1 col-lg-1">{{ $outgo->month }}</td>
-          <td class="col-xs-1 col-ma-1 col-lg-1"> {{ $outgo->amount }}</td>
-          <td class="col-xs-1 col-ma-1 col-lg-1"><a href="{{ route('posts.edit') }}" class="btn btn-info">編集</a></td>
-        </tr>
-        @endforeach
-      </tbody>
-    </table>
-    {{ $outgos->links() }}
+    支出明細
   </div>
   
 

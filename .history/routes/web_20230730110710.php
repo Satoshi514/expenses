@@ -43,3 +43,6 @@ Route::get('ajax/outgos',[App\Http\Controllers\Ajax\OutgoController::class,'show
 Route::get('ajax/posts/months',[App\Http\Controllers\Ajax\OutgoController::class,'months']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+

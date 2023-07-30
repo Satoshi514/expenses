@@ -1,5 +1,5 @@
 <script>
-  /*const mysql = require('mysql')
+  const mysql = require('mysql')
   const connection = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -9,7 +9,7 @@
   connection.connect((err) => {
   if (err) throw err;
   console.log('Connected!');
-});*/
+});
   var arr = [
     {cd:"", label:"▼カテゴリー"},
     {cd:"1", label:"食費"},
@@ -135,20 +135,17 @@
     {cd:"4", label:"用途不明金"},
   ];
 
-  window.onload = function(){
+  window.addEventListener("load", function(){
     for(var i=0;i<arr.length; i++){
       let op = document.createElement("option");
       op.value = arr[i].cd;
       op.text = arr[i].label;
       document.getElementById('category').appendChild(op);
-    }
+    });
 
     document.getElementById('category').addEventListener('change', function() {
       category(this);
     });
-
-    let elemnt = document.getElementById('category');
-    element.getAttribute('name');
   }
 
   function category(obj){
@@ -192,15 +189,10 @@
       op.text = targetArr[i].label;
       selObj.appendChild(op);
     }
-
-    function getElements(){
-      var elements = document.getElementById('subject');
-      var len = elements.getAttribute('selObj');
-    }
   }
 </script>
 
 <div>
-  <select id="category" name="major_subject_name"></select><br>
-  <select id="subject" name="subject" class="mt-2"></select>
+  <select id="category"></select><br>
+  <select id="subject" class="mt-2"></select>
 </div>

@@ -62,7 +62,7 @@ class OutgoController extends Controller
      */
     public function show(Outgo $outgo)
     {
-        $outgos = Outgo::paginate(5);
+        $outgos = Outgo::all();
 
     return view('posts.show',compact('outgos'));
     }
@@ -75,7 +75,9 @@ class OutgoController extends Controller
      */
     public function edit(Outgo $outgo)
     {
-      return view('posts.edit',compact('outgo'));
+      $outgo = Outgo::find($outgo);
+
+      return view('posts.edit');
     }
 
     /**
@@ -96,7 +98,7 @@ class OutgoController extends Controller
 
        $outgo->save();
 
-       return to_route('posts.show',compact('outgo'));
+       return to_route('posts.show', $outgo);
     }
 
     /**

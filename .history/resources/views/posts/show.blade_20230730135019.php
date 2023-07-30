@@ -9,7 +9,7 @@
 
   <div id="app" class="container">
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         
   
     <!--円グラフを表示するキャンバス -->
@@ -23,16 +23,14 @@
        </select>
      </div>
     </div>  
-    <div class=col-md-5>
-    <table class="table table-striped">
-      <h2>支出明細</h2>
+    <table width="50%" class="table table-striped">支出明細
       <thead>
         <tr>
-          <th class="col-xs-1 col-ma-1 col-lg-1">カテゴリー</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">項目</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">年</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">月</th>
-          <th class="col-xs-1 col-ma-1 col-lg-1">金額</th>
+          <th>カテゴリー</th>
+          <th>項目</th>
+          <th>年</th>
+          <th>月</th>
+          <th>金額</th>
         </tr>
       </thead>
       <tbody>

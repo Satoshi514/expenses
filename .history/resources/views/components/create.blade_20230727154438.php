@@ -146,9 +146,6 @@
     document.getElementById('category').addEventListener('change', function() {
       category(this);
     });
-
-    let elemnt = document.getElementById('category');
-    element.getAttribute('name');
   }
 
   function category(obj){
@@ -192,15 +189,10 @@
       op.text = targetArr[i].label;
       selObj.appendChild(op);
     }
-
-    function getElements(){
-      var elements = document.getElementById('subject');
-      var len = elements.getAttribute('selObj');
-    }
   }
 </script>
 
 <div>
-  <select id="category" name="major_subject_name"></select><br>
-  <select id="subject" name="subject" class="mt-2"></select>
+  <select id="category"></select><br>
+  <select id="subject" class="mt-2"></select>
 </div>

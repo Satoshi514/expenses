@@ -145,10 +145,8 @@
 
     document.getElementById('category').addEventListener('change', function() {
       category(this);
+      getAttribute('name')
     });
-
-    let elemnt = document.getElementById('category');
-    element.getAttribute('name');
   }
 
   function category(obj){
@@ -195,7 +193,7 @@
 
     function getElements(){
       var elements = document.getElementById('subject');
-      var len = elements.getAttribute('selObj');
+      var len = elements.getAttribute('name');
     }
   }
 </script>

@@ -145,10 +145,8 @@
 
     document.getElementById('category').addEventListener('change', function() {
       category(this);
+      var name = document.frm.name.value;
     });
-
-    let elemnt = document.getElementById('category');
-    element.getAttribute('name');
   }
 
   function category(obj){
@@ -194,8 +192,8 @@
     }
 
     function getElements(){
-      var elements = document.getElementById('subject');
-      var len = elements.getAttribute('selObj');
+      let elements = document.getElementByName('major_subject_name');
+      let len = elements.length;
     }
   }
 </script>
