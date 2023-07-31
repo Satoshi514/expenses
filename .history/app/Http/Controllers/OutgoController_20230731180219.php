@@ -72,7 +72,7 @@ class OutgoController extends Controller
         }
         $category = $query->paginate(5);
         
-       return view('posts.show',compact('outgos','search','category'));
+       return view('posts.show',compact('outgos','search,'category'));
     }
 
     /**

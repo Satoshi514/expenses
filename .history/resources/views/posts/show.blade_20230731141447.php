@@ -16,14 +16,14 @@
      <canvas id="myChart" width="400" height="400"></canvas>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
      
-    <div class="form-group col-md-5"> 
+    <div class="form-group"> 
       <label for="year">年</label>
       <select class="form-control" v-model="year" @change="getOutgos">
         <option v-for="year in years" :value="year">@{{ year }} 年</option>
       </select>
     </div>
     
-     <div class="form-group mt-2 col-md-5">
+     <div class="form-group">
        <label for="month">月</label>
        <select class="form-control" v-model="month" @change="getOutgos">
           <option v-for="month in months" :key="month" :value="month">@{{ month }} 月</option>
@@ -56,31 +56,8 @@
         @endforeach
       </tbody>
     </table>
-    </div>
-    <form action="get" action="">
-    <div>
-      <select name="month">
-        <option value="month">1月</option>
-        <option value="month">2月</option>
-        <option value="month">3月</option>
-        <option value="month">4月</option>
-        <option value="month">5月</option>
-        <option value="month">6月</option>
-        <option value="month">7月</option>
-        <option value="month">8月</option>
-        <option value="month">9月</option>
-        <option value="month">10月</option>
-        <option value="month">11月</option>
-        <option value="month">12月</option>
-      </select>
-    <div>
-      <button type="submit" class="btn btn-primary">検索</button>
-
-      <button>
-        <a href="{{ route('posts.show') }}" class="text-white">クリア</a>
-    </div>
-    {{ $outgos->appends(request()->query())->links() }}
-
+    {{ $outgos->links() }}
+  </div>
   
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
@@ -120,6 +97,7 @@
      // 支出データを取得
      fetch('/expenses/public/ajax/outgos?month='+ this.month)
           .then(response => response.json())
+     fetch('/expenses/public/ajax/outgos?year='+this.year)
           .then(data => {
               if(this.chart) { // チャートが存在していれば初期化
 

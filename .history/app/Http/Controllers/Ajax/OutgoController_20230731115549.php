@@ -16,13 +16,6 @@ class OutgoController extends Controller
            /*return([100,12,15,30]);*/
     }
 
-    public function years() {
-       
-       return Outgo::select('year')
-              ->groupBy('year')
-              ->pluck('year');
-    }
-
     public function months() {
 
     return Outgo::select('month')
@@ -30,5 +23,9 @@ class OutgoController extends Controller
            ->pluck('month');
     }
 
-    
+    pbulic function years() {
+       return Outgo::select('year')
+              ->groupBy('year')
+              ->plunk('year');
+    }
 }

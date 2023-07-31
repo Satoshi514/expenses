@@ -41,6 +41,6 @@ Route::delete('/posts/{outgo}',[OutController::class,'destroy'])->name('posts.de
 
 Route::get('ajax/outgos',[App\Http\Controllers\Ajax\OutgoController::class,'show']);
 Route::get('ajax/posts/months',[App\Http\Controllers\Ajax\OutgoController::class,'months']);
-Route::get('ajax/posts/years',[App\Http\Controllers\Ajax\OutgoController::class,'years']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

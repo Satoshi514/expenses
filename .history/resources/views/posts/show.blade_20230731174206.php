@@ -57,7 +57,7 @@
       </tbody>
     </table>
     </div>
-    <form action="get" action="">
+    <form action="get" action="{{ route('posts.show') }}">
     <div>
       <select name="month">
         <option value="month">1月</option>
@@ -75,7 +75,6 @@
       </select>
     <div>
       <button type="submit" class="btn btn-primary">検索</button>
-
       <button>
         <a href="{{ route('posts.show') }}" class="text-white">クリア</a>
     </div>

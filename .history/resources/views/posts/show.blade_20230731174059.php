@@ -57,7 +57,7 @@
       </tbody>
     </table>
     </div>
-    <form action="get" action="">
+    <form action="get" action="{{ route('posts.show') }}">
     <div>
       <select name="month">
         <option value="month">1月</option>
@@ -73,12 +73,10 @@
         <option value="month">11月</option>
         <option value="month">12月</option>
       </select>
-    <div>
+      <div>
       <button type="submit" class="btn btn-primary">検索</button>
-
       <button>
         <a href="{{ route('posts.show') }}" class="text-white">クリア</a>
-    </div>
     {{ $outgos->appends(request()->query())->links() }}
 
   

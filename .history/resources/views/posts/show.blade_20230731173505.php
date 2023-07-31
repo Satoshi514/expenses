@@ -57,7 +57,6 @@
       </tbody>
     </table>
     </div>
-    <form action="get" action="">
     <div>
       <select name="month">
         <option value="month">1月</option>
@@ -65,7 +64,7 @@
         <option value="month">3月</option>
         <option value="month">4月</option>
         <option value="month">5月</option>
-        <option value="month">6月</option>
+        <option value="month">>6月</option>
         <option value="month">7月</option>
         <option value="month">8月</option>
         <option value="month">9月</option>
@@ -73,12 +72,7 @@
         <option value="month">11月</option>
         <option value="month">12月</option>
       </select>
-    <div>
       <button type="submit" class="btn btn-primary">検索</button>
-
-      <button>
-        <a href="{{ route('posts.show') }}" class="text-white">クリア</a>
-    </div>
     {{ $outgos->appends(request()->query())->links() }}
 
   

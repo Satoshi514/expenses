@@ -63,16 +63,9 @@ class OutgoController extends Controller
     public function show(Request $request, Outgo $outgo)
     {
         $outgos = Outgo::paginate(5);
-        
-        $search = $request->input('search');
-        $query = Outgo::query();
-
-        if($search) {
-        $query->where('month');
-        }
-        $category = $query->paginate(5);
-        
-       return view('posts.show',compact('outgos','search','category'));
+        $month = Outgo::pluck('month')->unique();
+    
+    return view('posts.show',compact('outgo','outgos','categories','month'));
     }
 
     /**
@@ -81,7 +74,7 @@ class OutgoController extends Controller
      * @param  \App\Models\Outgo  $outgo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Outgo $outgo) 
+    public function edit(Outgo $outgo)
     {
       return view('posts.edit',compact('outgo'));
     }

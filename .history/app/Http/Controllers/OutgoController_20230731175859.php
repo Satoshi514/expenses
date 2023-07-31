@@ -69,10 +69,10 @@ class OutgoController extends Controller
 
         if($search) {
         $query->where('month');
-        }
         $category = $query->paginate(5);
+        }
         
-       return view('posts.show',compact('outgos','search','category'));
+       return view('posts.show',compact('outgos','month'));
     }
 
     /**

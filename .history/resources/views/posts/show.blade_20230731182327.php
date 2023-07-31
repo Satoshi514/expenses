@@ -75,6 +75,9 @@
       </select>
     <div>
       <button type="submit" class="btn btn-primary">検索</button>
+      @if($search == month)
+      $category->month
+      @endif
 
       <button>
         <a href="{{ route('posts.show') }}" class="text-white">クリア</a>
