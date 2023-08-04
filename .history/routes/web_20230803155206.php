@@ -33,10 +33,10 @@ Route::controller(UserController::class)->group(function () {
 Route::get('/show',[OutgoController::class, 'show'])->name('posts.show');
 Route::get('/create',[OutgoController::class, 'create'])->name('posts.create');
 Route::post('/create',[OutgoController::class, 'create'])->name('posts.create');
-Route::get('/posts/{outgo}/edit',[OutgoController::class, 'edit'])->name('posts.edit');
-Route::post('/posts/{outgo}/edit',[OutgoController::class, 'edit'])->name('posts.edit');
+Route::get('/edit',[OutgoController::class, 'edit'])->name('posts.edit');
+Route::post('/edit',[OutgoController::class, 'edit'])->name('posts.edit');
 Route::post('/posts/create',[OutgoController::class,'store'])->name('posts.store');
-Route::put('/posts/{outgo}',[OutgoController::class,'update'])->name('posts.update');
+Route::put('/posts/{post}',[OutgoController::class,'update'])->name('posts.update');
 Route::delete('/posts/{outgo}',[OutController::class,'destroy'])->name('posts.destroy');
 
 Route::get('ajax/outgos',[App\Http\Controllers\Ajax\OutgoController::class,'show']);

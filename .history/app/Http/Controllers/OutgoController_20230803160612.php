@@ -68,7 +68,7 @@ class OutgoController extends Controller
         $outgos = Outgo::all();
         $page = Outgo::sortable()->paginate(10);
         
-       return view('posts.show',compact('page','outgos'));
+       return view('posts.show',compact('outgos'));
     }
 
     /**

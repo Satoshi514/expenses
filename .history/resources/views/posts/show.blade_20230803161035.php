@@ -107,7 +107,7 @@ $(function() {
           <td class="col-xs-1 col ma-1 col-lg-1">{{ $outgo->day }}
           <td class="col-xs-1 col-ma-1 col-lg-1"> {{ $outgo->amount }}</td>
           <td class="col-xs-1 col-ma-1 col-lg-1"><a href="{{ route('posts.edit',$outgo) }}" class="btn btn-info">編集</a></td>
-        <form action="{{ Route('posts.destroy',$outgo) }}" method="post">
+        <form action="{{ Route('posts.destroy',$post->id) }}" method="post">
           @csrf
           @method('delete')
           <td class="col-xs-1 col-ma-1 col-lg-1"><button type="submit" class="btn btn-danger" onclick='return confirm("削除しますか？");'>削除</button>

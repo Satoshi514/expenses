@@ -77,9 +77,10 @@ class OutgoController extends Controller
      * @param  \App\Models\Outgo  $outgo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Outgo $outgo) 
+    public function edit(Outgo $outgo,$id) 
     {
-      return view('posts.edit',compact('outgo'));
+        $outgos = Outgo::find($id);
+      return view('posts.edit',compact('outgos'));
     }
 
     /**

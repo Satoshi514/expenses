@@ -77,9 +77,10 @@ class OutgoController extends Controller
      * @param  \App\Models\Outgo  $outgo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Outgo $outgo) 
+    public function edit(Outgo $outgo,$id) 
     {
-      return view('posts.edit',compact('outgo'));
+        $outgos = Outgo::find($id);
+      return view('posts.edit',compact('outgos'));
     }
 
     /**
@@ -91,6 +92,7 @@ class OutgoController extends Controller
      */
     public function update(Request $request, Outgo $outgo)
     {
+       $outgo = Outgo::find($id);
        $outgo->major_subject_name = $request->input('major_subject_name');
        $outgo->subject = $request->input('subject');
        $outgo->year = $request->input('year');

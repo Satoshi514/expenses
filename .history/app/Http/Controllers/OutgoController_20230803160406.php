@@ -19,7 +19,7 @@ class OutgoController extends Controller
         $this->middleware('auth', ['only' => ['create', 'show']]);
      }
     
-     public function index()
+     publi_c function index()
     {     
         
          return view('posts.show');
@@ -65,10 +65,9 @@ class OutgoController extends Controller
      */
     public function show(Request $request, Outgo $outgo)
     {
-        $outgos = Outgo::all();
-        $page = Outgo::sortable()->paginate(10);
+        $outgos = Outgo::sortable()->paginate(10);
         
-       return view('posts.show',compact('page','outgos'));
+       return view('posts.show',compact('outgos'));
     }
 
     /**
