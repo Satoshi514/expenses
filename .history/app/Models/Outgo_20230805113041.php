@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
+
+class outgo extends Model
+{
+    use HasFactory, Sortable;
+
+    protected  $fillable = ['major_subject_name','subject','amount','description','year','month','day','created_at','updated_at'];
+
+    public function income() {
+
+        return $this->belongsTo('App\Models\Income');
+    }
+
+}
+
