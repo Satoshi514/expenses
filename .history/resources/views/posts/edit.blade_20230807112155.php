@@ -43,7 +43,7 @@
         </div>
         
         <div class="text-center">
-        <button type="submit" name="update" value="更新" class="btn btn-success">更新</button> 
+        <button type="submit" name="update" value="更新" class="btn btn-success text-center">更新</button> 
         </div>
       </form>
     </div>

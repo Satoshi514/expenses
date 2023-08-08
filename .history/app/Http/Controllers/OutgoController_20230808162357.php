@@ -228,6 +228,6 @@ class OutgoController extends Controller
     {
         $outgo->delete();
 
-        return to_route('posts.show',compact('outgo'));
+        return to_route('posts.show');
     }
 }

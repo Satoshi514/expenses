@@ -3,7 +3,7 @@
 @section('content')
 
       <h1 class="text-center">編集</h1>
-    <div class="update">
+    <div class="d-flex align-items-center">
       <form action="{{ route('posts.update', $outgo) }}" enctype="multipart/form-data" method="post" class="mt-10">
         @csrf
         @method('put')
@@ -42,9 +42,7 @@
           <textarea name="description">{{ $outgo->description }}</textarea>
         </div>
         
-        <div class="text-center">
-        <button type="submit" name="update" value="更新" class="btn btn-success">更新</button> 
-        </div>
+        <button type="submit" name="update" value="更新" class="btn btn-success text-center">更新</button>
       </form>
     </div>
    

@@ -227,7 +227,5 @@ class OutgoController extends Controller
     public function destroy(Outgo $outgo)
     {
         $outgo->delete();
-
-        return to_route('posts.show',compact('outgo'));
     }
 }

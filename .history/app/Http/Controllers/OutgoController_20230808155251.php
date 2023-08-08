@@ -148,7 +148,7 @@ class OutgoController extends Controller
 
         return [
             $major_subject_name,
-            $subject,
+            $subject_name,
         ];
     }
 
@@ -228,6 +228,6 @@ class OutgoController extends Controller
     {
         $outgo->delete();
 
-        return to_route('posts.show',compact('outgo'));
+        return to_route('posts.show');
     }
 }

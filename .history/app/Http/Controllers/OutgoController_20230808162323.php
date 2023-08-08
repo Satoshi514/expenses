@@ -215,7 +215,7 @@ class OutgoController extends Controller
 
        $outgo->update();
 
-       return to_route('posts.show',compact('outgo'));
+       return view to_route(posts.showcompact('outgo'));
     }
 
     /**
@@ -228,6 +228,6 @@ class OutgoController extends Controller
     {
         $outgo->delete();
 
-        return to_route('posts.show',compact('outgo'));
+        return to_route('posts.show');
     }
 }

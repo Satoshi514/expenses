@@ -36,84 +36,108 @@ class OutgoController extends Controller
             '1' => '食料品',
             '2' => '外食',
             '3' => 'カフェ',
-            '4' => 'その他食費',
-        ],
-        '2' => [
-            '1' => '家賃',
-            '2' => '地震・火災保険',
-            '3' => 'その他住宅費',
-        ],
-        '3' => [
-            '1' => '電気代',
-            '2' => '水道代',
-            '3' => 'ガス代',
-        ],
-        '4' => [
-            '1' => 'ドラッグストア',
-            '2' => 'その他日用品',
-        ],
-        '5' => [
-            '1' => '飲み会',
-            '2' => 'プレゼント代',
-            '3' => '交際費',
-            '4' => '冠婚葬祭',
-            '5' => 'その他交際費',
-        ],
-        '6' => [
-            '1' => '電車',
-            '2' => 'バス',
-            '3' => 'タクシー',
-            '4' => '飛行機',
-            '5' => 'その他交通費',
-        ],
-        '7' => [
-            '1' => '携帯電話',
-            '2' => 'インターネット',
-            '3' => '固定電話',
-            '4' => '放送視聴料',
-            '5' => '宅配便',
-        ],
-        '8' => [
-            '1' => '本',
-            '2' => 'CD',
-            '3' => 'Blu-ray',
-            '4' => '映画',
-            '5' => 'アウトドア',
-            '6' => '旅行',
-            '7' => '秘密の趣味',
-            '8' => 'その他娯楽費',
-        ],
-        '9' => [
-            '1' => '医療費',
-            '2' => '薬',
-            '3' => 'その他医療費',
-        ],
-        '10' => [
-            '1' => '書籍',
-            '2' => '習い事',
-            '3' => '学費',
-            '4' => 'その他教養・教育費',
-        ],
-        '11' => [
-            '1' => '服',
-            '2' => '靴',
-            '3' => 'クリーニング',
-            '4' => '美容院・エステ',
-            '5' => '化粧品',
-            '6' => 'アクセサリー',
-            '7' => 'その他衣服・美容費',
-        ],
-        '12' => [
-            '1' => '家電',
-            '2' => '家具',
-            '3' => 'その他特別な支出',
-        ],
-        '13' => [
-            '1' => '雑費',
-            '2' => '寄付金',
-            '3' => '仕送り',
-            '4' => '用途不明金',
-        ],
+        {cd:"4", label:"その他食費"},
+      ];
+     
+      var arrHome = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"家賃"},
+        {cd:"2", label:"地震・火災保険"},
+        {cd:"3", label:"その他住宅費"},
+      ];
+    
+      var arrEnergy = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"電気代"},
+        {cd:"2", label:"水道代"},
+        {cd:"3", label:"ガス代"},
+      ];
+    
+      var arrDaily = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"ドラッグストア"},
+        {cd:"2", label:"その他日用品"},
+      ];
+          
+      var arrDate = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"飲み会"},
+        {cd:"2", label:"プレゼント代"},
+        {cd:"3", label:"交際費"},
+        {cd:"4", label:"冠婚葬祭"},
+        {cd:"5", label:"その他交際費"},
+      ];
+    
+      var arrTraffic = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"電車"},
+        {cd:"2", label:"バス"},
+        {cd:"3", label:"タクシー"},
+        {cd:"4", label:"飛行機"},
+        {cd:"5", label:"その他交通費"},
+      ];
+            
+      var arrTelecommunication = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"携帯電話"},
+        {cd:"2", label:"インターネット"},
+        {cd:"3", label:"固定電話"},
+        {cd:"4", label:"放送視聴料"},
+        {cd:"5", label:"宅配便"},
+      ];
+    
+      var arrFavorite = [
+        {cd:"", label:"▼項目選択"}, 
+        {cd:"1", label:"本"},
+        {cd:"2", label:"CD"},
+        {cd:"3", label:"Blu-ray"},
+        {cd:"4", label:"映画"},
+        {cd:"5", label:"アウトドア"},
+        {cd:"6", label:"旅行"},
+        {cd:"7", label:"秘密の趣味"},
+        {cd:"8", label:"その他娯楽費"},
+      ];
+    
+      var arrMedical = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"医療費"},
+        {cd:"2", label:"薬"},
+        {cd:"3", label:"その他医療費"},
+      ];
+    
+      var arrEducation = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"書籍"},
+        {cd:"2", label:"習い事"},
+        {cd:"3", label:"学費"},
+        {cd:"4", label:"その他教養・教育費"},
+      ];
+    
+      var arrFashion = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"服"},
+        {cd:"2", label:"靴"},
+        {cd:"3", label:"クリーニング"},
+        {cd:"4", label:"美容院・エステ"},
+        {cd:"5", label:"化粧品"},
+        {cd:"6", label:"アクセサリー"},
+        {cd:"7", label:"その他衣服・美容費"},
+      ];
+    
+      var arrSpecial = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"家電"},
+        {cd:"2", label:"家具"},
+        {cd:"3", label:"その他特別な支出"},
+      ];
+    
+      var arrUnclassified = [
+        {cd:"", label:"▼項目選択"},
+        {cd:"1", label:"雑費"},
+        {cd:"2", label:"寄付金"},
+        {cd:"3", label:"仕送り"},
+        {cd:"4", label:"用途不明金"},
+      ];
      ];
     
      public function __construct(){
@@ -142,22 +166,11 @@ class OutgoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function translation($major_subject,$subject) {
-        $major_subject_name = self::MAJOR_SUBJECT_NAME[$major_subject];
-        $subject = self::SUBJECT[$major_subject] [$subject];
-
-        return [
-            $major_subject_name,
-            $subject,
-        ];
-    }
-
     public function store(Request $request)
     {
-        list($major_subject_name, $subject) = self::translation($request->input('major_subject_name'),$request->input('subject'));
        $outgo = new Outgo();
-       $outgo->major_subject_name = $major_subject_name;
-       $outgo->subject = $subject;
+       $outgo->major_subject_name = $request->major_subject_name->text('major_subject_name');
+       $outgo->subject = $request->subject->input('subject');
        $outgo->year = $request->input('year');
        $outgo->month = $request->input('month');
        $outgo->day = $request->input('day');
@@ -228,6 +241,6 @@ class OutgoController extends Controller
     {
         $outgo->delete();
 
-        return to_route('posts.show',compact('outgo'));
+        return to_route('posts.show');
     }
 }

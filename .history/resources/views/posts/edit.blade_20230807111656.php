@@ -22,29 +22,27 @@
           <input type="text" name="year" value="{{ $outgo->year }}"> 
         </div>
 
-        <div class="mt-2 text-center">
+        <div class="mt-2">
           <label for="month">月</label>
           <input type="text" name="month" value="{{ $outgo->month }}">
         </div>
 
-        <div class="mt-2 text-center">
+        <div class="mt-2">
           <label for="month">日</label>
           <input type="text" name="day" value="{{ $outgo->day }}">
         </div>
 
-        <div class="mt-2 text-center">
+        <div class="mt-2">
           <label for="amount">金額</label>
           <input type="text" name="amount" value="{{ $outgo->amount }}">
         </div>
 
-        <div class="mt-2 text-center">
+        <div class="mt-2">
           <label for="description">メモ</label>
           <textarea name="description">{{ $outgo->description }}</textarea>
         </div>
         
-        <div class="text-center">
-        <button type="submit" name="update" value="更新" class="btn btn-success">更新</button> 
-        </div>
+        <button type="submit" name="update" value="更新" class="btn btn-success">更新</button>
       </form>
     </div>
    

@@ -203,10 +203,22 @@ class OutgoController extends Controller
      * @param  \App\Models\Outgo  $outgo
      * @return \Illuminate\Http\Response
      */
+
+     public function translation($major_subject,$subject) {
+        $major_subject_name = self::MAJOR_SUBJECT_NAME[$major_subject];
+        $subject = self::SUBJECT[$major_subject] [$subject];
+
+        return [
+            $major_subject_name,
+            $subject,
+        ];
+    }
+    
     public function update(Request $request, Outgo $outgo)
     {
-       $outgo->major_subject_name = $request->input('major_subject_name');
-       $outgo->subject = $request->input('subject');
+        list($major_subject_name, $subject) = self::translation($request->input('major_subject_name'),$request->input('subject'));
+       $outgo->major_subject_name = $major_subject_name;
+       $outgo->subject = $subject;
        $outgo->year = $request->input('year');
        $outgo->month = $request->input('month');
        $outgo->day = $request->input('day');
@@ -228,6 +240,6 @@ class OutgoController extends Controller
     {
         $outgo->delete();
 
-        return to_route('posts.show',compact('outgo'));
+        return to_route('posts.show');
     }
 }

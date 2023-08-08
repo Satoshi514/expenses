@@ -146,18 +146,13 @@ class OutgoController extends Controller
         $major_subject_name = self::MAJOR_SUBJECT_NAME[$major_subject];
         $subject = self::SUBJECT[$major_subject] [$subject];
 
-        return [
-            $major_subject_name,
-            $subject,
-        ];
     }
 
     public function store(Request $request)
     {
-        list($major_subject_name, $subject) = self::translation($request->input('major_subject_name'),$request->input('subject'));
        $outgo = new Outgo();
-       $outgo->major_subject_name = $major_subject_name;
-       $outgo->subject = $subject;
+       $outgo->major_subject_name = $request->major_subject_name->text('major_subject_name');
+       $outgo->subject = $request->subject->input('subject');
        $outgo->year = $request->input('year');
        $outgo->month = $request->input('month');
        $outgo->day = $request->input('day');
@@ -228,6 +223,6 @@ class OutgoController extends Controller
     {
         $outgo->delete();
 
-        return to_route('posts.show',compact('outgo'));
+        return to_route('posts.show');
     }
 }
