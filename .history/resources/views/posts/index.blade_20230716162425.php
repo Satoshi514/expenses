@@ -6,7 +6,7 @@
   <span class="button">
    <a href= "{{ route('users.mypage') }}" class="btn btn-danger mr-5">マイページ</a>
    <a href="{{ route('posts.show') }}" class="btn btn-info mx-5">支出グラフ</a>
-   <a href= "{{ route('posts.outgo_create') }}" class="btn btn-success ml-5">登録</a>
+   <a href= "{{ route('posts.create') }}" class="btn btn-success ml-5">登録</a>
   </span>
   <span class="d-flex justify-content-center">
   <img src="{{ asset('img/expense.png') }}" alt="expense" width="20%">

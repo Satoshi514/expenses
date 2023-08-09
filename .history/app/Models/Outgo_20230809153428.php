@@ -12,4 +12,4 @@ class outgo extends Model
 
     protected  $fillable = ['major_subject_name','subject','amount','description','year','month','day','created_at','updated_at'];
 
-}
+   

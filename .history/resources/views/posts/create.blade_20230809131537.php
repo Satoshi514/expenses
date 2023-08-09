@@ -2,7 +2,7 @@
 
 @section('content')
 
-      <h1 class="new">新規登録</h1>
+      <h1 class="new">支出新規登録</h1>
     <div class="data">
       <form action="{{ Route('posts.store') }}" method="post" class="mt-10">
         @csrf

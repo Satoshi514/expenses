@@ -4,7 +4,8 @@
 
 <h1 class="detail">支出詳細</h1>
 
-<a href = " {{ route('posts.outgo_create') }}" class="btn btn-info text-white ml-10">新規登録</a>
+<a href = " {{ route('posts.outgocreate') }}" class="btn btn-info text-white ml-10">新規登録</a>
+<a href = "{{ route('posts.index') }}" class="btn btn-danger">トップ</a>
 
 
   <div id="app" class="container">

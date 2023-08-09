@@ -32,18 +32,13 @@ Route::controller(UserController::class)->group(function () {
 
 /*Route::get('posts',[OutgoController::class,'index'])->name('posts.index');*/
 Route::get('/show',[OutgoController::class, 'show'])->name('posts.show');
-Route::get('/outgo_create',[OutgoController::class, 'outgo_create'])->name('posts.outgo_create');
-Route::post('/outgo_create',[OutgoController::class, 'outgo_create'])->name('posts.outgo_create');
+Route::get('/create',[OutgoController::class, 'create'])->name('posts.create');
+Route::post('/create',[OutgoController::class, 'create'])->name('posts.create');
 Route::get('/posts/{outgo}/edit',[OutgoController::class, 'edit'])->name('posts.edit');
 Route::post('/posts/{outgo}/edit',[OutgoController::class, 'edit'])->name('posts.edit');
-Route::post('outgo_create',[OutgoController::class,'outgo_store'])->name('posts.outgo_store');
-Route::put('/{outgo}',[OutgoController::class,'update'])->name('posts.update');
-Route::delete('/{outgo}',[OutgoController::class,'destroy'])->name('posts.destroy');
-
-Route::get('/income_create',[IncomeController::class,'income_create'])->name('posts.income_create');
-Route::post('/income_create',[IncomeController::class,'income_create'])->name('posts.income_create');
-Route::post('/income_create',[IncomeController::class,'income_store'])->name('posts.income_store');
-Route::delete('/{income}',[IncomeController::class,'destroy'])->name('posts.destroy');
+Route::post('/posts/create',[OutgoController::class,'store'])->name('posts.store');
+Route::put('/posts/{outgo}',[OutgoController::class,'update'])->name('posts.update');
+Route::delete('/posts/{outgo}',[OutController::class,'destroy'])->name('posts.destroy');
 
 Route::get('ajax/outgos',[App\Http\Controllers\Ajax\OutgoController::class,'show']);
 Route::get('ajax/posts/months',[App\Http\Controllers\Ajax\OutgoController::class,'months']);

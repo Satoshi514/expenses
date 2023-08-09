@@ -132,7 +132,7 @@ class OutgoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function outgo_create() {
+    public function create() {
         return view('posts.outgo_create');
     }
 
@@ -152,7 +152,7 @@ class OutgoController extends Controller
         ];
     }
 
-    public function outgo_store(Request $request)
+    public function store(Request $request)
     {
         list($major_subject_name, $subject) = self::translation($request->input('major_subject_name'),$request->input('subject'));
        $outgo = new Outgo();
