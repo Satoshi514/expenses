@@ -181,7 +181,7 @@ class OutgoController extends Controller
                    ->selectRaw('SUM(amount) as amount')
                    ->groupBy('year')
                    ->get();
-        $outgos = Outgo::paginate(10);
+        $outgos = Outgo::paginate(5);
         $incomes = Income::select('year')
                    ->selectRaw('SUM(amount) as amount')
                    ->groupBy('year')

@@ -62,7 +62,7 @@
 </table>
 </div>
    <div>
-      <h2 class=mt-10>支出明細</h2>
+      <h2 class=mt-4>支出明細</h2>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- 絞り込み機能 -->

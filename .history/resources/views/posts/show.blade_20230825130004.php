@@ -62,7 +62,7 @@
 </table>
 </div>
    <div>
-      <h2 class=mt-10>支出明細</h2>
+      <h2 class=mt-4>支出明細</h2>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- 絞り込み機能 -->
@@ -120,7 +120,7 @@ $(document).ready(function()
   </div>
     
       <!-- 支出データ表示 -->
-      <table id = "data" border="0" cellspacing="0"class="table table-striped tabel-hover">
+      <table id = "data" border="0" cellspacing="0"class="table table-striped tabel-hove mt-2r">
       <thead>
         <tr>
           <th class="col-xs-1 col-ma-1 col-lg-1">カテゴリー</th>
