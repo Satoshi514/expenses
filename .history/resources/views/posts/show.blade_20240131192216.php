@@ -31,34 +31,39 @@
      </div>
     </div>  
     
+    
     <!-- 収支表 -->
     <div class=col-md-5>
       <div class= "my-3 h-3">
-    <table>
+    <table class="table table-hover">
    @foreach ($incomes as $income)
-   @foreach ($outgos as $outgo)
+   @endforeach
+   @foreach ($expenses as $expense)
+   @endforeach
   <tbody>
+    <tr>
+      <th>収支表</th>
+      <td class="col-xs-1">{{ $income->year }}年</td>
+    </tr>
    <tr>
     <th>収入</th>
     <td class="col-xs-1">{{ $income->amount }}</td>
    </tr> 
    
-   <tr class="primary">
-    <th class="table-primary">支出</th> 
-    <td class="col-xs-1 col-ma-1 col-lg-1 table-primary">{{ $outgo->amount }}</td>
+   <tr>
+    <th>支出</th> 
+    <td class="col-xs-1 col-ma-1 col-lg-1">{{ $expense->amount }}</td>
    </tr>
  
-   <tr>
-    <th>収支</th>
-    <td class="col-xs-1 col-ma-1 col-lg-1">{{$income->amount}}-{{$outgo->amount}}</td>
+   <tr class="primary">
+    <th class="primary">収支</th>
+    <td class="col-xs-1 col-ma-1 col-lg-1 table-primary"><?php echo $income->amount- $expense->amount?></td>
    </tr>
    </tbody>
-  @endforeach
-@endforeach
 </table>
 </div>
    <div>
-      <h2 class=mt-4>支出明細</h2>
+      <h2 class=mt-10>支出明細</h2>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- 絞り込み機能 -->
@@ -125,6 +130,7 @@ $(document).ready(function()
           <th class="col-xs-1 col-ma-1 col-lg-1">月</th>
           <th class="col-xs-1 col-ma-1 col-lg-1">日</th>
           <th class="col-xs-1 col-ma-1 col-lg-1">金額</th>
+          <th class="width:20px"></th>
         </tr>
       </thead>
       <tbody>
