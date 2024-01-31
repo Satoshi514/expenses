@@ -42,6 +42,7 @@
    @endforeach
   <tbody>
     <tr>
+      <th>収支表</th>
       <td class="col-xs-1">{{ $income->year }}年</td>
     </tr>
    <tr>
